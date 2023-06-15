@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ads_online.user.models import User
+from user.models import User
 
 
 class UserRegistrationSerializer(serializers.ModelSerializer):

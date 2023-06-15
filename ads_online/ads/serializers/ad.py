@@ -42,4 +42,4 @@ class AdUpdateSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Ad
-        fields = ['tittle', 'price', 'description']
+        fields = ['title', 'price', 'description']

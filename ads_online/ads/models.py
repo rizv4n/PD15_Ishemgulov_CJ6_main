@@ -14,6 +14,7 @@ class Ad(models.Model):
     class Meta:
         verbose_name = 'Объявление'
         verbose_name_plural = 'Объявления'
+        ordering = ['created_at']
 
     def __str__(self):
         return self.title
@@ -28,6 +29,7 @@ class Comment(models.Model):
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+        ordering = ['created_at']
 
     def __str__(self):
         return self.ad
