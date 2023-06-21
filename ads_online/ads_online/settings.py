@@ -1,11 +1,12 @@
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 
+load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-&+!*&&wu82myi-_sjw=&c3*j5fg**m)tk*up-n5r0(yd^050cq'
-
-DEBUG = True
+SECRET_KEY = os.getenv("SECRET_KEY")
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = []
 
@@ -61,11 +62,11 @@ WSGI_APPLICATION = 'ads_online.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ads_online',
-        'USER': 'postgres',
-        'PASSWORD': 'hbpdfy1999',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': os.getenv("DB_NAME"),
+        'USER': os.getenv("DB_USER"),
+        'PASSWORD': os.getenv("DB_PASSWORD"),
+        'HOST': os.getenv("DB_HOST"),
+        'PORT': os.getenv("DB_PORT"),
     }
 }
 
