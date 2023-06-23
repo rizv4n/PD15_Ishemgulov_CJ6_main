@@ -6,15 +6,15 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: skymarket
-      POSTGRES_PASSWORD: skymarket
-      POSTGRES_DB: skymarket
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hbpdfy1999
+      POSTGRES_DB: ads_online
     restart: always
     ports:
     - "5432:5432"
 
   frontend:
-    build: ../1/.
+    build: ../frontend_react/.
     volumes:
       - frontend:/app/build
     depends_on:
