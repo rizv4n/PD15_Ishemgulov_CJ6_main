@@ -5,7 +5,7 @@ from ads.views import CommentListView, CommentDetailView, CommentCreateView, Com
 urlpatterns = [
     path('', CommentListView.as_view()),
     path('<int:pk>/', CommentDetailView.as_view()),
-    path('create/', CommentCreateView.as_view()),
-    path('<int:pk>/update/', CommentUpdateView.as_view()),
-    path('<int:pk>/delete/', CommentDeleteView.as_view()),
+    path('', CommentCreateView.as_view()),
+    path('<int:pk>', CommentUpdateView.as_view()),
+    path('<int:pk>', CommentDeleteView.as_view()),
 ]
