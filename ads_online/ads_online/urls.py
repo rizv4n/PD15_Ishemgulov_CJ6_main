@@ -12,7 +12,7 @@ users_router.register("users", UserViewSet, basename="user")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(users_router.urls)),
+    path('api/users/', include(users_router.urls)),
     path('api/', include(user_urls)),
     path('api/ads/', include(ad_urls)),
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
